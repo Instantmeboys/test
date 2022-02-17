@@ -7,14 +7,14 @@
 </head>
 
 <body>
-    <form action="search.php" method="post">
-            Search: <input type="text" name="search"><br>
+    <form action="r.php" method="get">
+            Search: <input type="text" name="v"><br>
             <input type="submit">
     </form>
 
     <?php
     
-    $sentVar = $_POST["search"];
+    $sentVar = $_GET["v"];
     $command = escapeshellcmd("python search-video.py \"$sentVar\"");
     $output = shell_exec($command);
     echo "You're currently searching for: " . $sentVar . "<br><br>";
@@ -24,6 +24,7 @@
     {
         foreach ($output['videos'][$index] as $var1 => $var2) {
             if ($var1 == "thumbnails") {
+                echo '<img src="'.$var2[0].'"<br><br>';
                 continue;
             }
             echo "$var1 = $var2<br>";
@@ -31,6 +32,7 @@
         $index++;
         echo "<br><br>";
     }
+    echo "<div class=\"lol\"></div>";
     ?>
     <br>
 
