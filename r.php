@@ -32,7 +32,6 @@
         $index++;
         echo "<br><br>";
     }
-    echo "<div class=\"lol\"></div>";
     ?>
     <br>
 
