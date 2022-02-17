@@ -1,17 +1,18 @@
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>YouTube Search</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Trackerless YouTube</title>
 </head>
-<body>
 
-    <main>
-        <form action="search.php" method="post">
-            Search: <input type="text" name="search"><br>
+<body>
+    <form action="r.php" method="get">
+            Search: <input type="text" name="v"><br>
             <input type="submit">
-        </form>
-    </main>
+    </form>
+    <br>
+
 </body>
+
 </html>
